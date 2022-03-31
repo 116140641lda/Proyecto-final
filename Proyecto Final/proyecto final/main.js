@@ -131,24 +131,48 @@ class Transaction {
         return this.type;       
     }
 }
-/*
-
-while ( balance === true) {
-    balance = cuentas.getBalance()
-    if (balance>=10 && balance<=990) {
-        buscarCuenta = true
 
 
-        
-    }
 
+function login () {
+    let login = document.getElementsByName ("login");
+    let usuario = document.getElementsByName ("usuario");
+    let password = document.getElementsByName("password");
+
+    if ( usuario == "ahiram@gmail.com" && password == "123" ) {
+       
+      
+        location = "principal.html";
+         
+          
+        } else {
+                alert("Credenciales incorrectas")
+
+              }
+          }
     
+           
+
+
+function salirRet () {
+        let salirRet = document.getElementsByName("salir ret")
+
+            location = "principal.html"
+           
+        } 
+function salirDep () {
+
+    let salirDep =document.getElementsByName ("dep")
+    location = "principal.html"
 }
-*/
+
+
+  
 
 
 
 function buscarCuenta (idAccount, personAccount){
+
     for( let index = 0; index < personAccount.length ; index++){
         let value = personAccount[index].getNumber();
         if( personAccount[index].getNumber()== idAccount){
@@ -158,9 +182,11 @@ function buscarCuenta (idAccount, personAccount){
 }
 
 function newBalance (idAccount, personAccount) {
+    let saldo1 = document.getElementsByName ("saldo1");
+    let saldo2 = document.getElementsByName ("saldo2")
+
     let account = buscarCuenta(idAccount, personAccount);
     let actualBalance = account.getBalance();
-    console.log (actualBalance);
 
  }
 
@@ -182,23 +208,9 @@ function deposit (idAccount, amount, personAccount) {
     
 
     
-
-        
-
-/*
-function limit (idAccount, amount, personAccount) {
-    let account = buscarCuenta(idAccount, personAccount);
-    let actualBalance = account.getBalance ();
-    let futureBalance = actualBalance + amount ;
-if (futurebalance <=990 && futurebalance>=10) {
-    
-} else {
-    console.log ("Supera los limites establecidos")
-}
-
-}
-*/
 function withdrawal (idAccount, amount, personAccount) {
+    document.getElementsByName("retiros")
+
     let account = buscarCuenta(idAccount, personAccount);
     let actualBalance = account.getBalance();
     if ( amount <= actualBalance) {
@@ -238,9 +250,6 @@ let Client1 = new Person ("Ahiram", 120895, "Fgj1204", cuentasAhiram);
 let Client2 = new Person ("Carlos", 120967, "klt345", cuentasCarlos);
 let Client3 = new Person ("Fabian", 11161406, "fhju678", cuentasFabian);
 
-//Login
-
-login ("ahiram@gmail.com","123")
 
 // Make a deposit
 
